@@ -1,0 +1,14 @@
+server:
+  name: "project-api"
+  addr: "127.0.0.1:80"
+
+zap:
+  debugFileName: "E:\\Assignment\\gin+grpc_Project\\Ms_Pro\\logs\\debug\\project-debug.log"
+  infoFileName: "E:\\Assignment\\gin+grpc_Project\\Ms_Pro\\logs\\info\\project-info.log"
+  warnFileName: "E:\\Assignment\\gin+grpc_Project\\Ms_Pro\\logs\\error\\project-error.log"
+  maxSize: 500,
+  maxAge: 28,
+  MaxBackups: 3
+etcd:
+  addrs:
+    - "127.0.0.1:2379"
