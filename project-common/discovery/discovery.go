@@ -75,20 +75,22 @@ func (r *Register) Stop() {
 func (r *Register) register() error {
 	leaseCtx, cancel := context.WithTimeout(context.Background(), time.Duration(r.DialTimeout)*time.Second)
 	defer cancel()
-
+	// 调用 etcd 客户端的 Grant 方法，向 etcd 请求分配一个租约。租约是一种机制，允许客户端在指定的时间内对某些键值对（通常是服务注册信息）拥有控制权。
 	leaseResp, err := r.cli.Grant(leaseCtx, r.srvTTL)
 	if err != nil {
 		return err
 	}
+	// 赋值租约ID
 	r.leasesID = leaseResp.ID
 	if r.keepAliveCh, err = r.cli.KeepAlive(context.Background(), leaseResp.ID); err != nil {
 		return err
 	}
-
+	// 其中包含name,addr等信息用于获取服务
 	data, err := json.Marshal(r.srvInfo)
 	if err != nil {
 		return err
 	}
+	// 将服务信息注册到 etcd 中，并与租约绑定，使得服务注册信息在租约有效期内保持有效，支持自动化的服务发现和失效清理。
 	_, err = r.cli.Put(context.Background(), BuildRegPath(r.srvInfo), string(data), clientv3.WithLease(r.leasesID))
 	return err
 }
@@ -108,6 +110,7 @@ func (r *Register) keepAlive() {
 			if err := r.unregister(); err != nil {
 				r.logger.Error("unregister failed", zap.Error(err))
 			}
+			// 撤销服务在etcd中的租约
 			if _, err := r.cli.Revoke(context.Background(), r.leasesID); err != nil {
 				r.logger.Error("revoke failed", zap.Error(err))
 			}

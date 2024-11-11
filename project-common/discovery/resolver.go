@@ -47,7 +47,6 @@ func (r *Resolver) Scheme() string {
 // Build creates a new resolver.Resolver for the given target
 func (r *Resolver) Build(target resolver.Target, cc resolver.ClientConn, opts resolver.BuildOptions) (resolver.Resolver, error) {
 	r.cc = cc
-	// 自己加的... 因为原来的target.Endpoint和target.Authority在新版本被废弃了
 	r.keyPrifix = BuildPrefix(Server{Name: target.Endpoint, Version: target.Authority})
 	if _, err := r.start(); err != nil {
 		return nil, err
@@ -89,6 +88,7 @@ func (r *Resolver) start() (chan<- struct{}, error) {
 // watch update events
 func (r *Resolver) watch() {
 	ticker := time.NewTicker(time.Minute)
+	// 实时监视以指定前缀为基础的键的变化
 	r.watchCh = r.cli.Watch(context.Background(), r.keyPrifix, clientv3.WithPrefix())
 
 	for {

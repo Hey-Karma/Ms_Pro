@@ -8,6 +8,7 @@ import (
 	"net"
 	"test.com/project-common/discovery"
 	"test.com/project-common/logs"
+	"test.com/project-grpc/user/login"
 	"test.com/project-user/config"
 	loginServiceV1 "test.com/project-user/pkg/service/login.service.v1"
 )
@@ -50,7 +51,7 @@ func RegisterGrpc() *grpc.Server {
 	c := gRPCConfig{
 		Addr: config.C.GC.Addr,
 		RegisterFunc: func(g *grpc.Server) {
-			loginServiceV1.RegisterLoginServiceServer(g, loginServiceV1.New())
+			login.RegisterLoginServiceServer(g, loginServiceV1.New())
 		},
 	}
 	s := grpc.NewServer()
@@ -61,6 +62,7 @@ func RegisterGrpc() *grpc.Server {
 		log.Println("cannot listen")
 	}
 	go func() {
+		log.Printf("grpc server started as :%s\n", c.Addr)
 		err = s.Serve(lis)
 		if err != nil {
 			log.Println("server started error", err)

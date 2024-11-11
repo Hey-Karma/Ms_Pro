@@ -11,10 +11,12 @@ import (
 var C = InitConfig()
 
 type Config struct {
-	viper      *viper.Viper
-	SC         *ServerConfig
-	GC         *GrpcConfig
-	EtcdConfig *EtcdConfig
+	viper       *viper.Viper
+	SC          *ServerConfig
+	GC          *GrpcConfig
+	EtcdConfig  *EtcdConfig
+	MysqlConfig *MysqlConfig
+	JwtConfig   *JwtConfig
 }
 
 type ServerConfig struct {
@@ -31,6 +33,21 @@ type GrpcConfig struct {
 
 type EtcdConfig struct {
 	Addrs []string
+}
+
+type MysqlConfig struct {
+	Username string
+	Password string
+	Host     string
+	Port     int
+	Db       string
+}
+
+type JwtConfig struct {
+	AccessExp     int
+	RefreshExp    int
+	AccessSecret  string
+	RefreshSecret string
 }
 
 func InitConfig() *Config {
@@ -51,6 +68,8 @@ func InitConfig() *Config {
 	conf.InitZapLog()
 	conf.ReadGrpcConfig()
 	conf.ReadEtcdConfig()
+	conf.InitMysqlConfig()
+	conf.InitJwtConfig()
 	return conf
 }
 
@@ -102,4 +121,24 @@ func (c *Config) ReadEtcdConfig() {
 	}
 	ec.Addrs = addrs
 	c.EtcdConfig = ec
+}
+func (c *Config) InitMysqlConfig() {
+	mc := &MysqlConfig{
+		Username: c.viper.GetString("mysql.username"),
+		Password: c.viper.GetString("mysql.password"),
+		Host:     c.viper.GetString("mysql.host"),
+		Port:     c.viper.GetInt("mysql.port"),
+		Db:       c.viper.GetString("mysql.db"),
+	}
+	c.MysqlConfig = mc
+}
+
+func (c *Config) InitJwtConfig() {
+	jc := &JwtConfig{
+		AccessSecret:  c.viper.GetString("jwt.accessSecret"),
+		AccessExp:     c.viper.GetInt("jwt.accessExp"),
+		RefreshSecret: c.viper.GetString("jwt.refreshSecret"),
+		RefreshExp:    c.viper.GetInt("jwt.refreshExp"),
+	}
+	c.JwtConfig = jc
 }
