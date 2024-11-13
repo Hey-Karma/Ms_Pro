@@ -438,3 +438,8 @@
 {"level":"ERROR","time":"2024-11-11T19:24:11.924+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2024-11-11T19:24:14.924+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2024-11-11T19:24:17.924+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-11-11T21:18:45.347+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-11-11T21:18:48.348+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-11-12T20:44:32.176+0800","caller":"login.service.v1/login_service.go:201","msg":"Login TokenVerify error","error":"token contains an invalid number of segments"}
+{"level":"ERROR","time":"2024-11-12T20:45:05.710+0800","caller":"login.service.v1/login_service.go:201","msg":"Login TokenVerify error","error":"tokenstring should not contain 'bearer '"}
+{"level":"ERROR","time":"2024-11-12T20:46:04.951+0800","caller":"login.service.v1/login_service.go:208","msg":"TokenVerify db FindMemberById error","error":"invalid value, should be pointer to struct or slice"}
