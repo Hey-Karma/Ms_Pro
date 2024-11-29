@@ -11,7 +11,7 @@ import (
 	"test.com/project-api/pkg/model/pro"
 	common "test.com/project-common"
 	"test.com/project-common/errs"
-	"test.com/project-grpc/user/project"
+	"test.com/project-grpc/project"
 	"time"
 )
 

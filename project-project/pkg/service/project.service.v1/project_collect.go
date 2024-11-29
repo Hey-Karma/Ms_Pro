@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"test.com/project-common/encrypts"
 	"test.com/project-common/errs"
-	"test.com/project-grpc/user/project"
+	"test.com/project-grpc/project"
 	"test.com/project-project/internal/data/pro"
 	"test.com/project-project/pkg/model"
 	"time"

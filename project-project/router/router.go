@@ -8,10 +8,13 @@ import (
 	"net"
 	"test.com/project-common/discovery"
 	"test.com/project-common/logs"
-	"test.com/project-grpc/user/project"
+	"test.com/project-grpc/project"
+	"test.com/project-grpc/task"
 	"test.com/project-project/config"
+	"test.com/project-project/internal/interceptor"
 	"test.com/project-project/internal/rpc"
 	project_service_v1 "test.com/project-project/pkg/service/project.service.v1"
+	task_service_v1 "test.com/project-project/pkg/service/task.service.v1"
 )
 
 type Router interface {
@@ -53,9 +56,11 @@ func RegisterGrpc() *grpc.Server {
 		Addr: config.C.GC.Addr,
 		RegisterFunc: func(g *grpc.Server) {
 			project.RegisterProjectServiceServer(g, project_service_v1.New())
+			// 使用grpc 需要先将服务端注册到具体的实例
+			task.RegisterTaskServiceServer(g, task_service_v1.New())
 		},
 	}
-	s := grpc.NewServer()
+	s := grpc.NewServer(interceptor.New().Cache())
 	c.RegisterFunc(s)
 
 	lis, err := net.Listen("tcp", c.Addr)
