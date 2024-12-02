@@ -12,6 +12,17 @@ type ProjectDao struct {
 	conn *gorms.GormConn
 }
 
+func (p *ProjectDao) FindProjectMemberByPid(ctx context.Context, projectCode int64) (list []*pro.ProjectMember, total int64, err error) {
+	session := p.conn.Session(ctx)
+	err = session.Model(&pro.ProjectMember{}).
+		Where("project_code=?", projectCode).
+		Find(&list).Error
+	err = session.Model(&pro.ProjectMember{}).
+		Where("project_code=?", projectCode).
+		Count(&total).Error
+	return
+}
+
 func (p *ProjectDao) UpdateProject(ctx context.Context, proj *pro.Project) error {
 	return p.conn.Session(ctx).Updates(&proj).Error
 }

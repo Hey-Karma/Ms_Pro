@@ -12,6 +12,11 @@ type MemberDao struct {
 	conn *gorms.GormConn
 }
 
+func (m *MemberDao) FindMemberByIds(background context.Context, ids []int64) (list []*member.Member, err error) {
+	err = m.conn.Session(background).Model(&member.Member{}).Where("id in (?)", ids).First(&list).Error
+	return
+}
+
 func (m *MemberDao) FindMemberById(ctx context.Context, id int64) (mem *member.Member, err error) {
 	err = m.conn.Session(ctx).Where("id=?", id).First(&mem).Error
 	return

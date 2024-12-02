@@ -6,6 +6,7 @@ import (
 	"github.com/jinzhu/copier"
 	"net/http"
 	"test.com/project-api/pkg/model"
+	"test.com/project-api/pkg/model/pro"
 	"test.com/project-api/pkg/model/tasks"
 	common "test.com/project-common"
 	"test.com/project-common/errs"
@@ -53,6 +54,38 @@ func (t *HandlerTask) taskStages(c *gin.Context) {
 	c.JSON(http.StatusOK, result.Success(gin.H{
 		"list":  list,
 		"total": stages.Total,
+		"page":  page.Page,
+	}))
+}
+
+func (t *HandlerTask) memberProjectList(c *gin.Context) {
+	result := &common.Result{}
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	// 1.获取参数
+	projectCode := c.PostForm("projectCode")
+	page := &model.Page{}
+	page.Bind(c)
+
+	msg := &task.TaskReqMessage{
+		MemberId:    c.GetInt64("memberId"),
+		ProjectCode: projectCode,
+		Page:        page.Page,
+		PageSize:    page.PageSize,
+	}
+	resp, err := TaskServiceClient.MemberProjectList(ctx, msg)
+	if err != nil {
+		code, msg := errs.ParseGrpcError(err)
+		c.JSON(http.StatusOK, result.Fail(code, msg))
+	}
+	var list []*pro.MemberProjectResp
+	copier.Copy(&list, resp.List)
+	if list == nil {
+		list = []*pro.MemberProjectResp{}
+	}
+	c.JSON(http.StatusOK, result.Success(gin.H{
+		"list":  list,
+		"total": resp.Total,
 		"page":  page.Page,
 	}))
 }

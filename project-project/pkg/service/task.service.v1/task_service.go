@@ -8,10 +8,13 @@ import (
 	"test.com/project-common/errs"
 	"test.com/project-common/tms"
 	"test.com/project-grpc/task"
+	"test.com/project-grpc/user/login"
 	"test.com/project-project/internal/dao"
 	"test.com/project-project/internal/data"
+	"test.com/project-project/internal/data/pro"
 	"test.com/project-project/internal/database/tran"
 	"test.com/project-project/internal/repo"
+	"test.com/project-project/internal/rpc"
 	"test.com/project-project/pkg/model"
 	"time"
 )
@@ -63,5 +66,51 @@ func (t *TaskService) TaskStages(co context.Context, msg *task.TaskReqMessage) (
 		v.ProjectCode = msg.ProjectCode
 	}
 	return &task.TaskStagesResponse{List: tsMessages, Total: total}, nil
+}
 
+func (t *TaskService) MemberProjectList(co context.Context, msg *task.TaskReqMessage) (*task.MemberProjectResponse, error) {
+	// 1.去project_member表 去查询 用户id列表
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	projectCode := encrypts.DecryptNoErr(msg.ProjectCode)
+	projectMembers, total, err := t.projectRepo.FindProjectMemberByPid(ctx, projectCode)
+	if err != nil {
+		zap.L().Error("projct MemberProjectList projectRepo.FindProjectMemberByPid error", zap.Error(err))
+		return nil, errs.GrpcError(model.DBError)
+	}
+	// 2.拿上用户id列表 去请求用户信息
+	if projectMembers == nil || len(projectMembers) <= 0 {
+		return &task.MemberProjectResponse{List: nil, Total: 0}, nil
+	}
+	var mIds []int64
+	pmMap := make(map[int64]*pro.ProjectMember)
+	for _, v := range projectMembers {
+		mIds = append(mIds, v.MemberCode)
+		pmMap[v.MemberCode] = v
+	}
+	// 请求用户信息
+	userMsg := &login.UserMessage{
+		MIds: mIds,
+	}
+	memberMessageList, err := rpc.LoginServiceClient.FindMemInfoByIds(ctx, userMsg)
+	if err != nil {
+		zap.L().Error("projct MemberProjectList LoginServiceClient.FindMemInfoByIds error", zap.Error(err))
+		return nil, err
+	}
+	var list []*task.MemberProjectMessage
+	for _, v := range memberMessageList.List {
+		owner := pmMap[v.Id].IsOwner
+		mpm := &task.MemberProjectMessage{
+			MemberCode: v.Id,
+			Name:       v.Name,
+			Avatar:     v.Avatar,
+			Email:      v.Email,
+			Code:       v.Code,
+		}
+		if v.Id == owner {
+			mpm.IsOwner = 1
+		}
+		list = append(list, mpm)
+	}
+	return &task.MemberProjectResponse{List: list, Total: total}, nil
 }

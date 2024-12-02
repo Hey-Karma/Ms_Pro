@@ -847,3 +847,13 @@
 {"level":"INFO","time":"2024-11-29T16:00:14.330+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
 {"level":"INFO","time":"2024-11-29T16:00:14.642+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
 {"level":"INFO","time":"2024-11-29T16:00:14.959+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-02T14:20:47.222+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
+{"level":"INFO","time":"2024-12-02T14:20:47.497+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:02.754+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:22.689+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById放入了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:22.996+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:23.309+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:28.394+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:42.274+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:42.575+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-02T14:21:42.577+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
