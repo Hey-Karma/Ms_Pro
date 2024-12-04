@@ -76,11 +76,13 @@ message TaskMessage{
   string code = 32;
   int32 canRead = 33;
   ExecutorMessage executor = 34;
+  string projectName = 35;
 }
 
 message ExecutorMessage {
-  string name = 1;
+  string Name = 1;
   string Avatar = 2;
+  string Code = 3;
 }
 
 message TaskListResponse{
