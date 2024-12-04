@@ -737,3 +737,25 @@
 {"level":"ERROR","time":"2024-11-27T16:25:25.784+0800","caller":"login.service.v1/login_service.go:243","msg":"TokenVerify cache get organization error","error":"redis: nil"}
 {"level":"ERROR","time":"2024-11-27T16:25:25.784+0800","caller":"login.service.v1/login_service.go:243","msg":"TokenVerify cache get organization error","error":"redis: nil"}
 {"level":"ERROR","time":"2024-11-27T16:27:13.551+0800","caller":"project.service.v1/project_service.go:140","msg":"project FindProjectTemplate FindInProTemIds error","error":"context canceled"}
+{"level":"ERROR","time":"2024-12-04T13:40:04.844+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T13:50:23.226+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T13:50:23.227+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T13:50:23.227+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T13:50:23.228+0800","caller":"project.service.v1/project_service.go:140","msg":"project FindProjectTemplate FindInProTemIds error","error":"context canceled"}
+{"level":"ERROR","time":"2024-12-04T14:01:11.825+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:01:11.825+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:01:11.826+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:02:19.618+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:02:19.619+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:02:19.619+0800","caller":"task.service.v1/task_service.go:138","msg":"project task TaskList taskRepo.FindTaskMemberByTaskId error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:02:19.619+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:08:18.184+0800","caller":"task.service.v1/task_service.go:138","msg":"project task TaskList taskRepo.FindTaskMemberByTaskId error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:08:18.184+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:08:18.184+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:08:18.184+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:08:18.184+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:09:28.556+0800","caller":"task.service.v1/task_service.go:138","msg":"project task TaskList taskRepo.FindTaskMemberByTaskId error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:09:28.556+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:09:28.556+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:09:28.556+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-04T14:11:26.314+0800","caller":"task.service.v1/task_service.go:138","msg":"project task TaskList taskRepo.FindTaskMemberByTaskId error","error":"context deadline exceeded"}

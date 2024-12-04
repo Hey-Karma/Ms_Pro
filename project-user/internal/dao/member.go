@@ -13,6 +13,9 @@ type MemberDao struct {
 }
 
 func (m *MemberDao) FindMemberByIds(background context.Context, ids []int64) (list []*member.Member, err error) {
+	if len(ids) <= 0 {
+		return nil, nil
+	}
 	err = m.conn.Session(background).Model(&member.Member{}).Where("id in (?)", ids).First(&list).Error
 	return
 }
