@@ -11,7 +11,6 @@ import (
 	"test.com/project-grpc/user/login"
 	"test.com/project-project/internal/dao"
 	"test.com/project-project/internal/data"
-	"test.com/project-project/internal/data/pro"
 	"test.com/project-project/internal/database"
 	"test.com/project-project/internal/database/tran"
 	"test.com/project-project/internal/repo"
@@ -86,7 +85,7 @@ func (t *TaskService) MemberProjectList(co context.Context, msg *task.TaskReqMes
 		return &task.MemberProjectResponse{List: nil, Total: 0}, nil
 	}
 	var mIds []int64
-	pmMap := make(map[int64]*pro.ProjectMember)
+	pmMap := make(map[int64]*data.ProjectMember)
 	for _, v := range projectMembers {
 		mIds = append(mIds, v.MemberCode)
 		pmMap[v.MemberCode] = v
@@ -196,14 +195,14 @@ func (t *TaskService) SaveTask(ctx context.Context, msg *task.TaskReqMessage) (*
 	if project == nil || project.Deleted == model.Deleted {
 		return nil, errs.GrpcError(model.ProjectAlreadyDeleted)
 	}
-
 	maxIdNum, err := t.taskRepo.FindTaskMaxIdNum(ctx, projectCode)
 	if err != nil {
 		zap.L().Error("project task SaveTask taskRepo.FindTaskMaxIdNum error", zap.Error(err))
 		return nil, errs.GrpcError(model.DBError)
 	}
+	a := 0
 	if maxIdNum == nil {
-		*maxIdNum = 0
+		maxIdNum = &a
 	}
 	maxSort, err := t.taskRepo.FindTaskSort(ctx, projectCode, stageCode)
 	if err != nil {
@@ -211,7 +210,7 @@ func (t *TaskService) SaveTask(ctx context.Context, msg *task.TaskReqMessage) (*
 		return nil, errs.GrpcError(model.DBError)
 	}
 	if maxSort == nil {
-		*maxSort = 0
+		maxSort = &a
 	}
 	assignTo := encrypts.DecryptNoErr(msg.AssignTo)
 	ts := &data.Task{
@@ -223,7 +222,7 @@ func (t *TaskService) SaveTask(ctx context.Context, msg *task.TaskReqMessage) (*
 		StageCode:   int(stageCode),
 		IdNum:       *maxIdNum + 1,
 		Private:     project.OpenTaskPrivate,
-		Sort:        *maxSort + 1,
+		Sort:        *maxSort + 65536,
 		BeginTime:   time.Now().UnixMilli(),
 		EndTime:     time.Now().Add(2 * 24 * time.Hour).UnixMilli(),
 	}
@@ -266,4 +265,175 @@ func (t *TaskService) SaveTask(ctx context.Context, msg *task.TaskReqMessage) (*
 	tm := &task.TaskMessage{}
 	copier.Copy(tm, display)
 	return tm, nil
+}
+
+func (t *TaskService) TaskSort(ctx context.Context, msg *task.TaskReqMessage) (*task.TaskSortResponse, error) {
+	// 移动的任务id 肯定有preTaskCode
+	preTaskCode := encrypts.DecryptNoErr(msg.PreTaskCode)
+	toStageCode := encrypts.DecryptNoErr(msg.ToStageCode)
+	if msg.PreTaskCode == msg.NextTaskCode {
+		return &task.TaskSortResponse{}, nil
+	}
+	err := t.sortTask(preTaskCode, msg.NextTaskCode, toStageCode)
+	if err != nil {
+		return nil, err
+	}
+	return &task.TaskSortResponse{}, nil
+}
+
+func (t *TaskService) sortTask(preTaskCode int64, nextTaskCode string, toStageCode int64) error {
+	// 1.从小到大排
+	// 2.重新排序后，后面的序号需要重排
+	c, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
+	ts, err := t.taskRepo.FindTaskById(c, preTaskCode)
+	if err != nil {
+		zap.L().Error("project task TaskSort taskRepo.FindTaskById error", zap.Error(err))
+		return errs.GrpcError(model.DBError)
+	}
+	err = t.transaction.Action(func(conn database.DbConn) error {
+		// 如果不相等需要进行修改
+		ts.StageCode = int(toStageCode)
+		if nextTaskCode != "" {
+			// 意味着要进行排序的替换
+			DnextTaskCode := encrypts.DecryptNoErr(nextTaskCode)
+			next, err := t.taskRepo.FindTaskById(c, DnextTaskCode)
+			if err != nil {
+				zap.L().Error("project task TaskSort taskRepo.FindTaskById error", zap.Error(err))
+				return errs.GrpcError(model.DBError)
+			}
+			// next.Sort 要找到比它小的哪个任务
+			prepre, err := t.taskRepo.FindTaskByStageCodeLtSort(c, next.StageCode, next.Sort)
+			if prepre != nil {
+				// 当间隙过小，直接充值sort字段的值
+				if next.Sort-prepre.Sort < 50 {
+					err = t.resetSort(toStageCode)
+					if err != nil {
+						zap.L().Error("project task TaskSort resetSort error", zap.Error(err))
+						return errs.GrpcError(model.DBError)
+					}
+					return t.sortTask(preTaskCode, nextTaskCode, toStageCode)
+				}
+				ts.Sort = (prepre.Sort + next.Sort) / 2
+			}
+			if prepre == nil {
+				ts.Sort = 0
+			}
+			//sort := ts.Sort
+			//ts.Sort = next.Sort
+			//next.Sort = sort
+			//err = t.taskRepo.UpdateTaskSort(c, conn, next)
+			//if err != nil {
+			//	zap.L().Error("project task TaskSort taskRepo.UpdataTaskSort error", zap.Error(err))
+			//	return errs.GrpcError(model.DBError)
+			//}
+		} else {
+			maxSort, err := t.taskRepo.FindTaskSort(c, ts.ProjectCode, int64(ts.StageCode))
+			if err != nil {
+				zap.L().Error("project task TaskSort taskRepo.FindTaskSort error", zap.Error(err))
+				return errs.GrpcError(model.DBError)
+			}
+			if maxSort == nil {
+				a := 0
+				maxSort = &a
+			}
+			ts.Sort = *maxSort + 65536
+		}
+		// 当间隙过小，直接充值sort字段的值
+		//if ts.Sort < 50 {
+		//	err = t.resetSort(toStageCode)
+		//	if err != nil {
+		//		zap.L().Error("project task TaskSort resetSort error", zap.Error(err))
+		//		return errs.GrpcError(model.DBError)
+		//	}
+		//	return t.sortTask(preTaskCode, nextTaskCode, toStageCode)
+		//}
+		err = t.taskRepo.UpdateTaskSort(c, conn, ts)
+		if err != nil {
+			zap.L().Error("project task TaskSort taskRepo.UpdataTaskSort error", zap.Error(err))
+			return errs.GrpcError(model.DBError)
+		}
+
+		return nil
+	})
+	return err
+}
+
+func (t *TaskService) resetSort(stageCode int64) error {
+	list, err := t.taskRepo.FindTaskByStageCode(context.Background(), int(stageCode))
+	if err != nil {
+		return err
+	}
+	return t.transaction.Action(func(conn database.DbConn) error {
+		iSort := 65536
+		for index, v := range list {
+			v.Sort = (index + 1) * iSort
+			err := t.taskRepo.UpdateTaskSort(context.Background(), conn, v)
+			if err != nil {
+				return err
+			}
+		}
+		return nil
+	})
+
+}
+
+func (t *TaskService) MyTaskList(ctx context.Context, msg *task.TaskReqMessage) (*task.MyTaskListResponse, error) {
+	var tsList []*data.Task
+	var err error
+	var total int64
+	if msg.TaskType == 1 {
+		//我执行的
+		tsList, total, err = t.taskRepo.FindTaskByAssignTo(ctx, msg.MemberId, int(msg.Type), msg.Page, msg.PageSize)
+		if err != nil {
+			zap.L().Error("project task MyTaskList taskRepo.FindTaskByAssignTo error", zap.Error(err))
+			return nil, errs.GrpcError(model.DBError)
+		}
+	}
+	if msg.TaskType == 2 {
+		//我参与的
+		tsList, total, err = t.taskRepo.FindTaskByMemberCode(ctx, msg.MemberId, int(msg.Type), msg.Page, msg.PageSize)
+		if err != nil {
+			zap.L().Error("project task MyTaskList taskRepo.FindTaskByMemberCode error", zap.Error(err))
+			return nil, errs.GrpcError(model.DBError)
+		}
+	}
+	if msg.TaskType == 3 {
+		//我创建的
+		tsList, total, err = t.taskRepo.FindTaskByCreateBy(ctx, msg.MemberId, int(msg.Type), msg.Page, msg.PageSize)
+		if err != nil {
+			zap.L().Error("project task MyTaskList taskRepo.FindTaskByCreateBy error", zap.Error(err))
+			return nil, errs.GrpcError(model.DBError)
+		}
+	}
+	if tsList == nil || len(tsList) <= 0 {
+		return &task.MyTaskListResponse{List: nil, Total: 0}, nil
+	}
+	var pids []int64
+	var mids []int64
+	for _, v := range tsList {
+		pids = append(pids, v.ProjectCode)
+		mids = append(mids, v.AssignTo)
+	}
+	pList, err := t.projectRepo.FindProjectByIds(ctx, pids)
+	projectMap := data.ToProjectMap(pList)
+
+	mList, err := rpc.LoginServiceClient.FindMemInfoByIds(ctx, &login.UserMessage{
+		MIds: mids,
+	})
+	mMap := make(map[int64]*login.MemberMessage)
+	for _, v := range mList.List {
+		mMap[v.Id] = v
+	}
+	var mtdList []*data.MyTaskDisplay
+	for _, v := range tsList {
+		memberMessage := mMap[v.AssignTo]
+		name := memberMessage.Name
+		avatar := memberMessage.Avatar
+		mtd := v.ToMyTaskDisplay(projectMap[v.ProjectCode], name, avatar)
+		mtdList = append(mtdList, mtd)
+	}
+	var myMsgs []*task.MyTaskMessage
+	copier.Copy(&myMsgs, mtdList)
+	return &task.MyTaskListResponse{List: myMsgs, Total: total}, nil
 }

@@ -12,6 +12,57 @@ type TaskDao struct {
 	conn *gorms.GormConn
 }
 
+func (t TaskDao) FindTaskByAssignTo(ctx context.Context, memberId int64, done int, page int64, size int64) (tsList []*data.Task, total int64, err error) {
+	session := t.conn.Session(ctx)
+	offset := (page - 1) * size
+	err = session.Model(&data.Task{}).Where("assign_to=? and deleted=0 and done=?", memberId, done).Limit(int(size)).Offset(int(offset)).Find(&tsList).Error
+	err = session.Model(&data.Task{}).Where("assign_to=? and deleted=0 and done=?", memberId, done).Count(&total).Error
+	return
+}
+
+func (t TaskDao) FindTaskByMemberCode(ctx context.Context, memberId int64, done int, page int64, size int64) (tList []*data.Task, total int64, err error) {
+	session := t.conn.Session(ctx)
+	offset := (page - 1) * size
+	sql := "select a.* from ms_task a,ms_task_member b where a.id=b.task_code and member_code=? and a.deleted=0 and a.done=? limit ?,?"
+	raw := session.Model(&data.Task{}).Raw(sql, memberId, done, offset, size)
+	err = raw.Scan(&tList).Error
+	if err != nil {
+		return nil, 0, err
+	}
+	sqlCount := "select count(*) from ms_task a,ms_task_member b where a.id=b.task_code and member_code=? and a.deleted=0 and a.done=?"
+	rawCount := session.Model(&data.Task{}).Raw(sqlCount, memberId, done)
+	err = rawCount.Scan(&total).Error
+	return
+}
+
+func (t *TaskDao) FindTaskByCreateBy(ctx context.Context, memberId int64, done int, page int64, size int64) (tList []*data.Task, total int64, err error) {
+	session := t.conn.Session(ctx)
+	offset := (page - 1) * size
+	err = session.Model(&data.Task{}).Where("create_by=? and deleted=0 and done=?", memberId, done).Limit(int(size)).Offset(int(offset)).Find(&tList).Error
+	err = session.Model(&data.Task{}).Where("create_by=? and deleted=0 and done=?", memberId, done).Count(&total).Error
+	return
+}
+func (t TaskDao) FindTaskByStageCodeLtSort(ctx context.Context, stageCode int, sort int) (ts *data.Task, err error) {
+	session := t.conn.Session(ctx)
+	err = session.Where("stage_code=? and sort < ?", stageCode, sort).Order("sort desc").Limit(1).Find(&ts).Error
+	if err == gorm.ErrRecordNotFound {
+		return nil, nil
+	}
+	return
+}
+
+func (t TaskDao) UpdateTaskSort(ctx context.Context, conn database.DbConn, ts *data.Task) error {
+	t.conn = conn.(*gorms.GormConn)
+	err := t.conn.Tx(ctx).Where("id=?", ts.Id).Select("sort", "stage_code").Updates(&ts).Error
+	return err
+}
+
+func (t TaskDao) FindTaskById(ctx context.Context, taskCode int64) (ts *data.Task, err error) {
+	session := t.conn.Session(ctx)
+	err = session.Where("id=?", taskCode).Find(&ts).Error
+	return
+}
+
 func (t TaskDao) SaveTask(ctx context.Context, conn database.DbConn, ts *data.Task) error {
 	t.conn = conn.(*gorms.GormConn)
 	err := t.conn.Tx(ctx).Save(&ts).Error
