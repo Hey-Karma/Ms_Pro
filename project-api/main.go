@@ -10,6 +10,7 @@ import (
 
 func main() {
 	r := gin.Default()
+	//r.Use(midd.RequestLog())
 	// 路由
 	router.InitRouter(r)
 

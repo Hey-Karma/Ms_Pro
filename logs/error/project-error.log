@@ -759,3 +759,9 @@
 {"level":"ERROR","time":"2024-12-04T14:09:28.556+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2024-12-04T14:09:28.556+0800","caller":"task.service.v1/task_service.go:127","msg":"project task TaskList FindTaskByStageCode error","error":"context deadline exceeded"}
 {"level":"ERROR","time":"2024-12-04T14:11:26.314+0800","caller":"task.service.v1/task_service.go:138","msg":"project task TaskList taskRepo.FindTaskMemberByTaskId error","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-09T10:21:15.734+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2024-12-09T10:21:15.734+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2024-12-09T10:21:15.734+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2024-12-09T10:21:21.712+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2024-12-09T10:21:21.712+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2024-12-09T10:21:21.712+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
