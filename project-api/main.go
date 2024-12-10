@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"net/http"
 	_ "test.com/project-api/api"
 	"test.com/project-api/config"
 	"test.com/project-api/router"
@@ -11,6 +12,7 @@ import (
 func main() {
 	r := gin.Default()
 	//r.Use(midd.RequestLog())
+	r.StaticFS("/upload", http.Dir("upload"))
 	// 路由
 	router.InitRouter(r)
 
