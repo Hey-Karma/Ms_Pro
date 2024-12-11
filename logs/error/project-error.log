@@ -765,3 +765,14 @@
 {"level":"ERROR","time":"2024-12-09T10:21:21.712+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
 {"level":"ERROR","time":"2024-12-09T10:21:21.712+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
 {"level":"ERROR","time":"2024-12-09T10:21:21.712+0800","caller":"login.service.v1/login_service.go:223","msg":"Login TokenVerify error","error":"ip不合法"}
+{"level":"ERROR","time":"2024-12-11T16:20:26.696+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-11T16:39:55.970+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T16:39:55.972+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T16:39:55.972+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T16:44:35.913+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T16:44:35.913+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T16:44:35.914+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T19:02:00.082+0800","caller":"project.service.v1/project_service.go:143","msg":"project FindProjectTemplate FindInProTemIds error","error":"context canceled"}
+{"level":"ERROR","time":"2024-12-11T19:07:42.599+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T19:07:42.599+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-11T19:07:42.599+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
