@@ -776,3 +776,6 @@
 {"level":"ERROR","time":"2024-12-11T19:07:42.599+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
 {"level":"ERROR","time":"2024-12-11T19:07:42.599+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
 {"level":"ERROR","time":"2024-12-11T19:07:42.599+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-12T16:09:34.590+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-12T16:09:35.006+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-12T16:09:38.007+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}

@@ -1,0 +1,5 @@
+curl --location 'localhost/project/task/selfList' \
+--header 'Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzQ1NzQ2MzcsImlwIjoiMTI3LjAuMC4xIiwidG9rZW4iOiIxMDA3In0.dfFz0Pyf2MtBCd20invwWu4fLFsW31Fd_1z-G8VpyTo' \
+--form 'pageSize=10' \
+--form 'taskType=1' \
+--form 'type=0'
