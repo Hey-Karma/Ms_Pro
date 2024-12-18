@@ -47,7 +47,12 @@ message ListAuthMessage{
   repeated ProjectAuth list = 1;
   int64  total = 2;
 }
+
+message AuthNodesResponse {
+  repeated string list = 1;
+}
 service AuthService {
   rpc AuthList(AuthReqMessage) returns(ListAuthMessage){}
   rpc Apply(AuthReqMessage) returns(ApplyResponse){}
+  rpc AuthNodesByMemberId(AuthReqMessage) returns(AuthNodesResponse){}
 }
