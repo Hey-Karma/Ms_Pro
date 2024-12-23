@@ -29,8 +29,8 @@ func New() *CacheInterceptor {
 	return &CacheInterceptor{cache: dao.Rc, cacheMap: cacheMap}
 }
 
-func (c *CacheInterceptor) Cache() grpc.ServerOption {
-	return grpc.UnaryInterceptor(func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
+func (c *CacheInterceptor) CacheInterceptor() func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
+	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
 		respType := c.cacheMap[info.FullMethod]
 		if respType == nil {
 			return handler(ctx, req)
@@ -51,5 +51,5 @@ func (c *CacheInterceptor) Cache() grpc.ServerOption {
 		c.cache.Put(con, info.FullMethod+"::"+cacheKey, string(bytes), 5*time.Minute)
 		zap.L().Info(info.FullMethod + "放入了缓存")
 		return
-	})
+	}
 }

@@ -1522,3 +1522,281 @@
 {"level":"INFO","time":"2024-12-19T15:44:53.838+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
 {"level":"INFO","time":"2024-12-19T15:45:25.534+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/MyOrgList走了缓存"}
 {"level":"INFO","time":"2024-12-19T15:55:54.154+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
+{"level":"INFO","time":"2024-12-20T16:35:10.092+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
+{"level":"INFO","time":"2024-12-20T16:35:10.131+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById放入了缓存"}
+{"level":"INFO","time":"2024-12-20T16:35:10.521+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-20T16:35:11.796+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-20T16:35:16.449+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-20T16:35:16.771+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-20T16:35:16.778+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"ERROR","time":"2024-12-22T11:03:03.496+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:03:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:04:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:04:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:05:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:05:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:06:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:06:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:07:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:07:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:08:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:08:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:09:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:09:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:10:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:10:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:11:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:11:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:12:03.501+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:12:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:13:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:13:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:14:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:14:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:15:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:15:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:16:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:16:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:17:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:17:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:18:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:18:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:19:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:19:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:20:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:20:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:21:03.495+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:21:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:22:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:22:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:23:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:23:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:24:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:24:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:25:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:25:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:26:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:26:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:27:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:27:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:28:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:28:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:29:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:29:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:30:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:30:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:31:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:31:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:32:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:32:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:33:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:33:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:34:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:34:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:35:03.493+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:35:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:36:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:36:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:37:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:37:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:38:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:38:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:39:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:39:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:40:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:40:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:41:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:41:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:42:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:42:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:43:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:43:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:44:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:44:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:45:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:45:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:46:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:46:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:47:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:47:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:48:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:48:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:49:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:49:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:50:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:50:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:51:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:51:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:52:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:52:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:53:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:53:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:54:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:54:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:55:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:55:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:56:03.493+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:56:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:57:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:57:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:58:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:58:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:59:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T11:59:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:00:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:00:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:01:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:01:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:02:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:02:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:03:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:03:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:04:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:04:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:05:03.493+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:05:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:06:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:06:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:07:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:07:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:08:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:08:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:09:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:09:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:10:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:10:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:11:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:11:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:12:03.493+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:12:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:13:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:13:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:14:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:14:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:15:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:15:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:16:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:16:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:17:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:17:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:18:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:18:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:19:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:19:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:20:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:20:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:21:03.531+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:21:03.614+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:22:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:22:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:23:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:23:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:24:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:24:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:25:03.495+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:25:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:26:03.495+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:26:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:27:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:27:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:28:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:28:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:29:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:29:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:30:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:30:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:31:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:31:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:32:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:32:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:33:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:33:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:34:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:34:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:35:03.495+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:35:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:36:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:36:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:37:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:37:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:38:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:38:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:39:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:39:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:40:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:40:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:41:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:41:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:42:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:42:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:43:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:43:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:44:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:44:03.607+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:45:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:45:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:46:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:46:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:47:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:47:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:48:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:48:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:49:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:49:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:50:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:50:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:51:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:51:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:52:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:52:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:53:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:53:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:54:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:54:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:55:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:55:03.607+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:56:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:56:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:57:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:57:03.607+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:58:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:58:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:59:03.494+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T12:59:03.608+0800","caller":"discovery/resolver.go:104","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-22T16:37:45.301+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-22T16:37:45.301+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-22T16:37:45.301+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"INFO","time":"2024-12-22T16:37:54.566+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
+{"level":"INFO","time":"2024-12-22T16:37:54.815+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById放入了缓存"}
+{"level":"INFO","time":"2024-12-22T16:37:55.007+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-22T16:37:58.131+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-22T16:37:59.027+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-22T16:38:03.024+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-22T16:38:08.997+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-23T10:41:08.582+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
+{"level":"INFO","time":"2024-12-23T10:41:30.894+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/MyOrgList走了缓存"}
+{"level":"INFO","time":"2024-12-23T10:41:31.316+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:25.944+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:26.060+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById放入了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:26.400+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:29.594+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:31.243+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:32.467+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:43.985+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:44.669+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:47.390+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-23T12:48:47.396+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:15.275+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:16.366+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:16.673+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById放入了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:19.522+0800","caller":"interceptor/cache.go:46","msg":"/project.service.v1.ProjectService/FindProjectByMemId走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:21.840+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:24.261+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:26.131+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:28.457+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:30.135+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:29:30.486+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/FindMemInfoById走了缓存"}
+{"level":"INFO","time":"2024-12-23T13:45:19.540+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/MyOrgList放入了缓存"}
+{"level":"INFO","time":"2024-12-23T13:45:19.555+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById放入了缓存"}
+{"level":"INFO","time":"2024-12-23T13:45:19.862+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
+{"level":"INFO","time":"2024-12-23T13:45:33.711+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/MyOrgList走了缓存"}

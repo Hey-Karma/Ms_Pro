@@ -47,7 +47,11 @@ func (r *Resolver) Scheme() string {
 // Build creates a new resolver.Resolver for the given target
 func (r *Resolver) Build(target resolver.Target, cc resolver.ClientConn, opts resolver.BuildOptions) (resolver.Resolver, error) {
 	r.cc = cc
-	r.keyPrifix = BuildPrefix(Server{Name: target.Endpoint, Version: target.Authority})
+	//r.keyPrifix = BuildPrefix(Server{Name: target.Endpoint(), Version: target.Authority})
+	r.keyPrifix = BuildPrefix(Server{
+		Name:    target.Endpoint(), // 替代 target.Endpoint
+		Version: target.URL.Host,   // 替代 target.Authority
+	})
 	if _, err := r.start(); err != nil {
 		return nil, err
 	}
