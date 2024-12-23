@@ -1800,3 +1800,14 @@
 {"level":"INFO","time":"2024-12-23T13:45:19.555+0800","caller":"interceptor/cache.go:47","msg":"/login.service.v1.LoginService/FindMemInfoById放入了缓存"}
 {"level":"INFO","time":"2024-12-23T13:45:19.862+0800","caller":"interceptor/cache.go:52","msg":"/project.service.v1.ProjectService/FindProjectByMemId放入了缓存"}
 {"level":"INFO","time":"2024-12-23T13:45:33.711+0800","caller":"interceptor/cache.go:41","msg":"/login.service.v1.LoginService/MyOrgList走了缓存"}
+{"level":"ERROR","time":"2024-12-23T14:32:37.045+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:38.168+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:38.556+0800","caller":"discovery/resolver.go:108","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:40.046+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:41.169+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:43.047+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:44.169+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:46.047+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:47.170+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:49.048+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:38:54.170+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}

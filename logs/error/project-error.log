@@ -1016,3 +1016,14 @@
 {"level":"ERROR","time":"2024-12-22T16:37:45.301+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
 {"level":"ERROR","time":"2024-12-22T16:37:45.301+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
 {"level":"ERROR","time":"2024-12-22T16:37:45.301+0800","caller":"login.service.v1/login_service.go:229","msg":"TokenVerify cache get member error","error":"redis: nil"}
+{"level":"ERROR","time":"2024-12-23T14:32:37.045+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:38.168+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:38.556+0800","caller":"discovery/resolver.go:108","msg":"sync failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:40.046+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:41.169+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:43.047+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:44.169+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:46.047+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:47.170+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:32:49.048+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
+{"level":"ERROR","time":"2024-12-23T14:38:54.170+0800","caller":"discovery/discovery.go:121","msg":"register failed","error":"context deadline exceeded"}
